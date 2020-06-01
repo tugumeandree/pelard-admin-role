@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pelard-Admin</title>
+     <!-- Compiled and minified CSS -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <style>
+        .card {
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          transition: 0.3s;
+          width: 80%;
+          display: none;
+        
+        }
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          }
+          .container {
+            padding-top:80px;
+            justify-content: center;
+            padding-left:50px;
+          }
+        
+        </style>
+</head>
+<body>
+    <div class="container">
+        <h6 class="center"><a onclick="showCard()" class="waves-effect waves-light btn-small">View All cases</a></h6>
+  <form>
+<div class="card">
+    <label for="cars">Get Admin Rights</label>
+
+<div class="input-field col s6">
+    <select>
+      <option value="" disabled selected>Choose Role:</option>
+      <option value="Contributor">Contributor</option>
+    </select>
+    <label>Contributor can view all cases</label>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
+<p>Admin Will Grant You Acess if eligible</p>
+</form>
+</div>
+             </div> 
+               <!-- Compiled and minified JavaScript -->
+               <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+             
+            <script>
+                $(document).ready(function(){
+                    $('select').formSelect();
+                  });
+
+var card = document.querySelector(".card");
+function showCard() {
+ card.style.display = "block"
+}
+             </script>
+</body>
+</html>
